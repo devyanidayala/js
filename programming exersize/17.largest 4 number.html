@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //17. W.a.p Find Largest of Four Numbers Using Nested if else  
+    let a=Number(prompt("enter the number:"));
+    let b=Number(prompt("enter the number:"));
+    let c=Number(prompt("enter the number:"));
+    let d=Number(prompt("enter the number:"));
+
+if (a > b) {
+    if (a > c) {
+        if (a > d) {
+            document.write(`a is big`);
+        } else {
+            document.write(`d is big`);
+        }
+    } else {
+        if (c > d) {
+            document.write(`c is big`);
+        } else {
+            document.write(`d is big`);
+        }
+    }
+} else {
+    if (b > c) {
+        if (b > d) {
+            document.write(`b is big`);
+        } else {
+            document.write(`d is big`);
+        }
+    } else {
+        if (c > d) {
+            document.write(`c is big`);
+        } else {
+            document.write(`d is big`);
+        }
+    }
+}
+    </script>
+</body>
+</html>

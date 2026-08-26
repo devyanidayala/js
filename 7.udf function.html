@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //udf function
+
+    //1..no return and no argument
+    // function sum(){
+    //     let a=10,b=5;
+    //     document.write(`ans :-${a+b}`)
+    //     document.write("<br>")
+    // }
+    // sum();
+    // sum();
+
+    //2..no return with argument
+    // function sum(a,b,c){
+    //     document.write(`ans :-${a+b+c}`)
+    //     document.write("<br>")
+    // }
+    // sum(3,6,9);
+
+    //3..return with argument
+    // function sum(){
+    //     let a=10,b=55;
+    //     return a + b;
+    // }
+    // let ans = sum();
+    // document.write(`Ans :- ${ans}`)
+
+    //4..no return no argument
+    //  function mul(x,y){
+    //             return x * y;
+    //         }
+    //         let ans = mul(10,5);
+    //         document.write(`Ans :- ${ans}`)
+
+    //local variable
+        // function hello(){
+        //     let x=10;
+        //     document.write(x)
+        // }
+        // hello();
+
+    //anynomous function
+    // const checkAge = function(){
+    //     let age = 18;
+    //     if(age>=18){
+    //         document.write(`you can vote`);
+    //     }
+    //     else{
+    //         document.write(`you can not vote`);
+    //     }
+    // }
+    // checkAge();
+
+    //Immediately Invoked Function Expression (IIFE)
+    // (function(){
+    //     document.write(`hello`);
+    // })();
+
+            //argument with no return 
+            // (function(name){
+            //     document.write(`name:-${name}`);
+            // })("devyani");
+
+            //return with no argument
+            // const res = (function(){
+            //     let x=5,y=6;
+            //     return x+y;
+            // })();
+            // document.write(res);
+
+            // return with argument
+
+            const res = (function(r){
+                return 3.14 * r * r;
+            })(4)
+            console.log(`circle radius :- ${res}`);
+
+            
+          
+
+    </script>
+      
+    
+</body>
+</html>

@@ -1,92 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
         //udf function
 
-    //1..no return and no argument
-    // function sum(){
-    //     let a=10,b=5;
-    //     document.write(`ans :-${a+b}`)
-    //     document.write("<br>")
-    // }
-    // sum();
-    // sum();
+        //1..no return and no argument
+        // function sum(){
+        //     let a=10,b=5;
+        //     document.write(`ans :-${a+b}`)
+        //     document.write("<br>")
+        // }
+        // sum();
+        // sum();
 
-    //2..no return with argument
-    // function sum(a,b,c){
-    //     document.write(`ans :-${a+b+c}`)
-    //     document.write("<br>")
-    // }
-    // sum(3,6,9);
+        //2..no return with argument
+        // function sum(a,b,c){
+        //     document.write(`ans :-${a+b+c}`)
+        //     document.write("<br>")
+        // }
+        // sum(3,6,9);
 
-    //3..return with argument
-    // function sum(){
-    //     let a=10,b=55;
-    //     return a + b;
-    // }
-    // let ans = sum();
-    // document.write(`Ans :- ${ans}`)
+        //3..return with argument
+        // function sum(){
+        //     let a=10,b=55;
+        //     return a + b;
+        // }
+        // let ans = sum();
+        // document.write(`Ans :- ${ans}`)
 
-    //4..no return no argument
-    //  function mul(x,y){
-    //             return x * y;
-    //         }
-    //         let ans = mul(10,5);
-    //         document.write(`Ans :- ${ans}`)
+        //4..no return no argument
+        //  function mul(x,y){
+        //             return x * y;
+        //         }
+        //         let ans = mul(10,5);
+        //         document.write(`Ans :- ${ans}`)
 
-    //local variable
+        //local variable
         // function hello(){
         //     let x=10;
         //     document.write(x)
         // }
         // hello();
 
-    //anynomous function
-    // const checkAge = function(){
-    //     let age = 18;
-    //     if(age>=18){
-    //         document.write(`you can vote`);
-    //     }
-    //     else{
-    //         document.write(`you can not vote`);
-    //     }
-    // }
-    // checkAge();
+        //anynomous function
+        // const checkAge = function(){
+        //     let age = 18;
+        //     if(age>=18){
+        //         document.write(`you can vote`);
+        //     }
+        //     else{
+        //         document.write(`you can not vote`);
+        //     }
+        // }
+        // checkAge();
 
-    //Immediately Invoked Function Expression (IIFE)
-    // (function(){
-    //     document.write(`hello`);
-    // })();
+        //Immediately Invoked Function Expression (IIFE)
+        // (function(){
+        //     document.write(`hello`);
+        // })();
 
-            //argument with no return 
-            // (function(name){
-            //     document.write(`name:-${name}`);
-            // })("devyani");
+        //argument with no return 
+        // (function(name){
+        //     document.write(`name:-${name}`);
+        // })("devyani");
 
-            //return with no argument
-            // const res = (function(){
-            //     let x=5,y=6;
-            //     return x+y;
-            // })();
-            // document.write(res);
+        //return with no argument
+        // const res = (function(){
+        //     let x=5,y=6;
+        //     return x+y;
+        // })();
+        // document.write(res);
 
-            // return with argument
+        // return with argument
+        // const res = (function (r) {
+        //     return 3.14 * r * r;
+        // })(4)
+        // document.write(`circle radius :- ${res}`);
 
-            const res = (function(r){
-                return 3.14 * r * r;
-            })(4)
-            console.log(`circle radius :- ${res}`);
 
-            
-          
+        // Constructor Function
+        // const Person = function (name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // let user = new Person("devyani", 21);
+        // document.write(user.name);
+        // document.write(`<br>`)
+        // document.write(user.age);
+
+
+        let college = function (name, clgname = "abc college") {
+            document.write(`name :- ${name} , college name :- ${clgname}`);
+            document.write(`<br>`);
+        }
+        college("devyani");
+        college("mahek");
+        college("srushti");
+        college("hetvi", "sutex");
+        college("hiral", "p.p savani");
+
+
+
+
 
     </script>
-      
-    
+
+
 </body>
+
 </html>

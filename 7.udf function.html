@@ -95,17 +95,27 @@
         // document.write(user.age);
 
 
-        let college = function (name, clgname = "abc college") {
-            document.write(`name :- ${name} , college name :- ${clgname}`);
-            document.write(`<br>`);
+        // let college = function (name, clgname = "abc college") {
+        //     document.write(`name :- ${name} , college name :- ${clgname}`);
+        //     document.write(`<br>`);
+        // }
+        // college("devyani");
+        // college("mahek");
+        // college("srushti");
+        // college("hetvi", "sutex");
+        // college("hiral", "p.p savani");
+
+
+        // recursion
+        function sum(no) {
+            if (no === 0) {
+                return 0;
+            }
+
+            return no + sum(no - 1);
         }
-        college("devyani");
-        college("mahek");
-        college("srushti");
-        college("hetvi", "sutex");
-        college("hiral", "p.p savani");
-
-
+        let ans = sum(5);
+        document.write(ans);
 
 
 

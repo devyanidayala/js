@@ -66,9 +66,9 @@
         //11. slice() : Extracts part of array.Does NOT change original array.
         //delete value
         //let fruits=["banana","apple","kiwi","orange"];
-                    // 0       1       2       3
+        // 0       1       2       3
         //let result = fruits.slice(1,3);
-                             //position,end position
+        //position,end position
         //document.write(result);
 
         //12.splice() : Adds/removes elements.Changes original array.
@@ -88,7 +88,67 @@
         // let result=a.concat(b);
         // document.write(result);
 
-    
+        //14.forEach() : Loops array.
+        // let fruits = ["apple", "banana", "kiwi"];
+        // fruits.forEach(function (fruit){
+        //     document.write(fruit);
+        //     document.write(`<br>`);
+        // });
+
+        // arrow function version
+        // let fruits = ["Apple", "Banana", "Mango"];
+        // fruits.forEach((fruit) => {
+        //     document.write(fruit);
+        //     document.write(`<br>`);
+
+        // });
+
+        //15. map() : Creates new transformed array.
+        // let numbers = [4, 5, 6];
+        // let doubled = numbers.map((num) => {
+        //     return num * 2;
+        // });
+        // document.write(doubled);
+
+        //16. filter() : Filters elements based on condition.
+        // let numbers = [1, 2, 3, 4, 5];
+        // let even = numbers.filter((num) => {
+        //     return num % 2 === 0;
+        // });
+        // document.write(even);
+
+        //17. find() : Returns first matching element.
+        // let number =[5,10,15,20];
+        // let result=number.find((num)=>{
+        //     return num >= 5;
+        // })
+        // document.write(result);
+
+        //18. some() : Checks if Any element matches.
+        // let numbers = [1, 3, 5, 8];
+        // let result = numbers.some((num) => {
+        //     return num % 2 === 0;
+        // });
+        // document.write(result);
+
+        //19. every() : Checks if ALL elements match.
+        // let numbers = [2,4,6,8];
+        // let result = numbers.every((num) => {
+        //     return num % 2 === 0;
+        // });
+        // document.write(result);
+
+        //20. reduce() : Reduces array to single value.
+        let numbers = [2,4,6,8];
+          let result = numbers.reduce((total,num) => {
+            return total+num;
+        });
+        document.write(result);
+
+
+
+
+
 
 
     </script>

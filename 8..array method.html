@@ -139,11 +139,25 @@
         // document.write(result);
 
         //20. reduce() : Reduces array to single value.
-        let numbers = [2,4,6,8];
-          let result = numbers.reduce((total,num) => {
-            return total+num;
+        //let numbers = [2,4,6,8];
+        //let result = numbers.reduce((total,num) => {
+        //  return total+num;
+        //});
+        //document.write(result);
+
+        //real-life example : shopping cart total
+        // let numbers = [100, 200, 300];
+        // let total = numbers.reduce((total, sum) => {
+        //     return total + sum;
+        // })
+        // document.write(total);
+
+        // filter student 
+        let marks = [30, 40, 50, 90];
+        let passed = marks.filter((mark) => {
+            return mark >= 50;
         });
-        document.write(result);
+        document.write(passed);
 
 
 

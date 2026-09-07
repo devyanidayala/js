@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
         //create object
-        let student = {
-            //key : value
-            name : "devyani",
-            age : 21,
-            city : "surat"
-        }
+        // let student = {
+        //key : value
+        //     name : "devyani",
+        //     age : 21,
+        //     city : "surat"
+        // }
 
-        console.log(student);
+        //console.log(student);
 
-        //add object
-        student.course="full stack";
 
-        //modify object
-        student.name="kavya";
+        // 1..Dot Notation
+        // let person = {
+        //     name :"devyani",
+        //     age : 21
+        // }
+        // console.log(person.name);
+        // console.log(person.age);
 
-        //delete object
-        delete student.age;
+        // 2..Bracket Notation
+        //  let person = {
+        //     name :"devyani",
+        //     age : 21
+        // }
+        // console.log(person["name"]);
 
-        console.log(student);
+        //create variable with Bracket Notation
+        // let key = "age";
+        // console.log(person[key]);
+
+        //3..Changing Object Values
+        // let person = {
+        //     name: "mahek"
+        // };
+        // person.name = "amit";
+        // console.log(person.name);
+
+        //4..Adding New Properties
+        // let person ={
+        //     name : "devyani",
+        //     age : 21
+        // };
+        // person.city = "surat";
+
+        // console.log(person);
+
+        //5..Removing Properties
+        //  let person ={
+        //     name : "devyani",
+        //     age : 21
+        // };
+
+        // delete person.age;
+
+        // console.log(person);
+
+        // 6..Object Methods:can store function
+        // let person = {
+        //     name: "mahek",
+        //     h: function () {
+        //         console.log(person.name);
+        //         console.log("hello");
+        //     }
+        // };
+        // person.h();
+
+        // 7.this keyword
+        let person = {
+            name: "mahek",
+            h: function () {
+                console.log("hello" + person.name);
+            }
+        };
+        person.h();
+
+
+
+
+
 
     </script>
-    
+
 </body>
+
 </html>

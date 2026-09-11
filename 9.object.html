@@ -75,16 +75,88 @@
         // person.h();
 
         // 7.this keyword
-        let person = {
-            name: "mahek",
-            h: function () {
-                console.log("hello" + person.name);
-            }
-        };
-        person.h();
+        //let person = {
+        //    name: "mahek",
+        //   h: function () {
+        //        console.log("hello" + person.name);
+        //    }
+        //};
+        //person.h();
 
+        //8.Nested objects : Object Inside Object
+        // let student = {
+        //     name: "devyani",
+        //     address: {
+        //         city: "surat",
+        //         state: "gujrat"
+        //     }
+        // };
+        // document.write(student.address.city);
 
+        //9.Array of Objects: Very important concept
+        // let students = [
+        //     {
+        //         name: "devyani",
+        //         age: 21
+        //     },
+        //     {
+        //         name: "mahek",
+        //         age: 21
+        //     }
+        // ];
+        // document.write(students[0].name);
 
+        //10.for...in Loop : Used for object properties.
+        // let student = {
+        //     name: "devyani",
+        //     age: 21,
+        //     city: "surat"
+        // };
+        // for(let key in student){
+        //     console.log(key, student[key]);
+        // }
+
+        //11.Object.keys(): Returns array of keys.
+
+        // let person = {
+        //     name: "Rahul",
+        //     age: 25
+        // };
+        // console.log(Object.keys(person));
+
+        //12.Object.values() : Returns array of values.
+
+        // console.log(Object.values(person));
+
+        //13.Object.entries(): Returns key-value pairs.
+
+        // console.log(Object.entries(person));
+
+        // 14.Object Destructuring (ES6): Extract properties easily.
+
+        // let person = {
+        //     name: "Rahul",
+        //     age: 25
+        // };
+        // let { name, age } = person;
+        // console.log(name);
+        // console.log(age);
+
+        1//15.Spread Operator with Objects:
+
+        // let person = {
+        //     name: "Rahul",
+        //     age: 25
+        // };
+        // let copy = { ...person };
+        // console.log(copy);
+
+        //merge object:
+
+        let a = { x: 1 };
+        let b = { y: 2 };
+        let result = { ...a, ...b };
+        console.log(result);
 
 
 

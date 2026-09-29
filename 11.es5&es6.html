@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //1. The let Keyword 
+        // let n = 10;
+        // {
+        //     let n = 2; // Block-scoped variable
+        //     console.log(n);
+        // }
+        // console.log(n);
+
+        //2. The const Keyword
+        // const Pi = 3.14159;
+        // Pi = 3; // Error: Assignment to constant variable
+        // console.log(Pi);
+
+        //3. Arrow Functions
+        // Traditional function
+        // function add(a, b) {
+        //     return a + b;
+        // }
+        // console.log(`ans: ${10+5}`);
+
+        //Arrow function
+        // const add = (a, b) => {
+        //     return a + b
+        // }
+        // console.log(`ans: ${5+10}`);
+
+        //4. Array Destructuring
+        // const a = ["red","blue","green"];
+        // const[second,third] = a;
+        // console.log(second,third);
+
+        //5. Destructuring Assignment
+        // const obj = {
+        //     name : "devyani",
+        //     age : 21
+        // }
+        // const{name,age} = obj;
+        // console.log(name,age); 
+
+        // 6. The Spread (...) Operator
+        // let n1 = [1, 2, 3];
+        // let n2 = [...n1, 4, 5];
+        // console.log(n2);
+
+        // 7. The For/Of Loop
+
+        //Iterating Over an Array
+        // const a = ["apple", "banana", "cherry"];
+        // for (const fruit of a) {
+        //     console.log(fruit);
+        // }
+
+        //Iterating Over a String
+        // const s = "hello";
+        // for (const char of s) {
+        //     console.log(char);
+        // }
+
+        //8.Classes
+        // class Animal {
+        //     speak() {
+        //         console.log("The animal makes a sound");
+        //     }
+        // }
+        // const dog = new Animal();
+        // dog.speak();
+
+
+        // 9. Promises
+        //.then and .cathch method
+
+        //10.Default parameters
+        function greet(name = "Guest") {
+            return `Hello, ${name}!`;
+        }
+        console.log(greet());
+
+    </script>
+
+</body>
+
+</html>

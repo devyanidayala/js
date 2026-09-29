@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 1 -->
+    <p id="text">Hello</p>
+    <button onclick="changeText()">Change</button>
+
+    <p id="title"> JavaScript</p>
+    <button onclick="changeColor()">Change Color</button>
+
+    <!-- 2 -->
+    <p>New Paragraph</p>
+
+    <!-- 3 -->
+    <div id="box"></div>
+
+    <script>
+
+        // 1. Modifying Content and Styles
+
+        // Change Text (innerHTML)
+        // function changeText() {
+        //     document.getElementById("text").innerHTML = "Welcome";
+        // }
+
+        // Change Style
+        // function changeColor() {
+        //     document.getElementById("title").style.color = "red";
+        // }
+        // document.body.style.backgroundColor = "lightblue";
+
+
+        // 2. Creating Elements
+        // let p = document.createElement("p");
+        // p.innerHTML = "New Paragraph";
+        // This creates:
+        // <p>New Paragraph</p>
+
+        // 3. appendChild()
+        let p = document.createElement("p");
+        p.innerHTML = "Hello";
+        document.getElementById("box").appendChild(p);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //polymorphism two type: 
+
+        //1.Method Overriding
+        // ex:1
+        // class Animal {
+        //     sound() {
+        //         console.log("Generic Animal Sound");
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     sound() {
+        //         console.log("Woof! Woof!");
+        //     }
+        // }
+
+        // let dog = new Dog();
+
+        // dog.sound();
+
+        // ex:2
+        // class Bird {
+        //     move() {
+        //         console.log("Bird is flying");
+        //     }
+        // }
+
+        // class Fish {
+        //     move() {
+        //         console.log("Fish is swimming");
+        //     }
+        // }
+
+        // let animals = [new Bird(), new Fish()];
+
+        // animals.forEach(animal => animal.move());
+
+        // 2.Method Overloading:not support js
+
+        // ---------------------------------------------------
+
+        // Abstraction:of hiding internal implementation details and exposing only the functionality required by users.
+
+        class Car {
+            start() {
+                this.#checkEngine();
+                console.log("Car Started");
+            }
+            #checkEngine() {
+                console.log("Checking Engine...");
+            }
+        }
+        const car = new Car();
+        car.start();
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1 -->
+    <p id="text">Hello</p>
+
+    <!-- 2 -->
+    <p class="demo">HTML</p>
+    <p class="demo">CSS</p>
+    <p class="demo">JS</p>
+
+    <!-- 3 -->
+    <h1>Hello</h1>
+    <h1>Welcome</h1>
+
+    <!-- 4 -->
+    //select by id
+    <p id="text">Hello</p>
+
+    //select by class
+    <p class="demo"> Hello</p>
+
+    <!-- select by tag -->
+    <h1> Hello</h1>
+
+    <!-- 5 -->
+    <p class="demo"> HTML</p>
+    <p class="demo">CSS</p>
+    <p class="demo">JS</p>
+
+
+    <script>
+
+
+        // 1. document.getElementById()
+        // let element = document.getElementById("text");
+        // console.log(element);
+        // Change Text Example
+        // document.getElementById("text").innerHTML = "Welcome";
+
+        // 2. document.getElementsByClassName()
+        // let element = document.getElementsByClassName("demo");
+        // console.log(element);
+
+        // 3. document.getElementsByTagName()
+        // let element = document.getElementsByTagName("h1");
+        // console.log(element);
+
+        // 4. document.querySelector()
+
+        //select by id
+        // let element = document.querySelector("#text");
+        // console.log(element);
+
+        //Select by Class
+        //let element = document.querySelector(".demo");
+
+        //Select by Tag
+        //let element = document.querySelector("h1");
+
+        // 5. document.querySelectorAll()
+        // let elements = document.querySelectorAll(".demo");
+        // console.log(elements);
+
+        //Change first element:
+        document.querySelectorAll(".demo")[0].innerHTML = "React";
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    //a
+    <button onclick="show()">Click</button>
+
+    //b
+    <button ondblclick="hello()">Double Click</button>
+
+    //c
+    <button onmouseover="over()">Mouse Entered</button>
+
+    //d
+    <p onmouseout="out()">Move Out</p>
+
+    //e
+    <div onmousemove="move()">Move Mouse</div>
+
+    //f
+    <button onmousedown="down()">Press</button>
+
+    //g
+    <button onmouseup="up()">Release</button>
+
+    //------------------------------
+    //a
+    <input onkeydown="pressKey()">
+
+    //b
+    <input onkeyup="releaseKey()">
+
+    //---------------------------------
+    //a
+    <form onsubmit="submitForm()">
+        <button>Submit</button>
+    </form>
+
+    //b
+    <select onchange="changeValue()">
+        <option>HTML</option>
+        <option>CSS</option>
+    </select>
+
+    //c
+    <input onfocus="focusInput()">
+
+    //d
+         <input onblur="blurInput()">
+
+
+
+
+    <script>
+
+        //mouse event:
+
+        //a)click event(click)
+        function show() {
+            alert("hi");
+        }
+
+        //b) Double Click Event (dblclick)
+        function hello() {
+            alert("Double Clicked");
+        }
+
+        // c) Mouse Over (mouseover)
+        function over() {
+            alert("Mouse Entered");
+        }
+
+        // d) Mouse Out (mouseout)
+        function out() {
+            console.log("Mouse Left");
+        }
+
+        // e) Mouse Move (mousemove)
+        // function move() {
+        //     alert("Mouse Moving");
+        // }
+
+        // f) Mouse Down (mousedown)
+        function down() {
+            console.log("Mouse Button Pressed");
+        }
+
+        // g) Mouse Up (mouseup)
+        function up() {
+            console.log("Mouse Button Released");
+        }
+
+        // ----------------------------------------------------------------------
+        // 2. Keyboard Events
+        // a) Key Down (keydown)
+        function pressKey() {
+            console.log("Key Pressed");
+        }
+
+        //b) Key Up (keyup)
+        function releaseKey() {
+            console.log("Key Released");
+        }
+
+        // -------------------------------------------------------
+        // 3. Form Events
+        // a) Submit Event (submit)
+        function submitForm() {
+            alert("Form Submitted");
+        }
+
+        // b) Change Event (change)
+        function changeValue() {
+            console.log("Value Changed");
+        }
+
+        // c) Focus Event (focus)
+        function focusInput() {
+            console.log("Input Focused");
+        }
+
+        //d) Blur Event (blur)
+            function blurInput() {
+                console.log("Input Lost Focus");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //2..constructor method
+
+        // class Student {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+        // const s1 = new Student("Aman", 20);
+        // console.log(s1.name);
+
+        // console.log(s1.age);
+
+
+        //3.this keyword
+        // class Person {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        //     greet() {
+        //         console.log("Hello " + this.name);
+        //     }
+        // }
+        // const p1 = new Person("Aman");
+        // p1.greet();
+
+        //getter
+        class Student {
+            constructor(name) {
+                this._name = name;
+            }
+            get name() {
+                return this._name;
+            }
+        }
+        const s1 = new Student("Aman");
+        console.log(s1.name);
+
+        //setter
+        // class Student {
+        //     constructor(name) {
+        //         this._name = name;
+
+        //     }
+        //     set name(newName) {
+        //         this._name = newName;
+        //     }
+        // }
+        // const s1 = new Student("Aman");
+        // s1.name = "Rahul";
+        // console.log(s1._name);
+        //----------------------------------------------
+        // class Student{
+        //     constructor(uname,age){
+        //        this.name = uname;
+        //        this.age = age;
+
+        //     }
+
+        //     details(){
+        //         console.log(`name is ${this.name} age is :- ${this.age}`);
+
+        //     }
+        // }
+
+        // let st = new Student("jay",21);
+        // st.details();
+
+
+        //------------------------------------
+        // class Bank {
+        //     constructor(uname, pin, balance) {
+        //         this.name = uname;
+        //         this.pin = pin;
+        //         this.balance = balance;
+        //     }
+
+
+        //     deposite(amt) {
+        //         this.balance += amt
+        //         console.log(`deposite successfully add`);
+        //     }
+
+        //     withdraw(amt) {
+        //         this.balance -= amt
+        //         console.log(`successfully Withdraw`);
+        //     }
+
+        //     display() {
+        //         console.log(`Your Final Balance :- ${this.balance}`);
+        //     }
+        // }
+
+
+        // let bank = new Bank("jay", 1111, 1000);
+        // bank.deposite(100);
+        // bank.withdraw(200);
+        // bank.display();
+
+
+
+    </script>
+
+</body>
+
+</html>

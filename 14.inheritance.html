@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //1..single inheritance
+        // class Animal {
+        //     eat() {
+        //         console.log("Animal is eating");
+        //     }
+        // }
+        // class Dog extends Animal {
+        //     bark() {
+        //         console.log("Dog is barking");
+        //     }
+        // }
+        // const dog = new Dog();
+        // dog.eat();
+        // dog.bark();
+
+        //2..multiple inhetritance
+        class Animal {
+            eat() {
+                console.log("Eating");
+            }
+        }
+        class Dog extends Animal {
+            bark() {
+                console.log("Barking");
+            }
+        }
+        class Puppy extends Dog {
+            play() {
+                console.log("Playing");
+            }
+        }
+        const P = new Puppy();
+        P.eat();
+        P.bark();
+        P.play();
+
+
+        //3.hierarchical inheritance
+        // class Animal {
+        //     eat() {
+        //         console.log("Eating");
+        //     }
+        // }
+        // class Dog extends Animal { }
+        // class Cat extends Animal { }
+
+        // class Cow extends Animal { }
+
+        //4.hybrid inheritance
+        // class Person {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        // }
+        //Child Class
+        // class Student extends Person {
+        //     constructor(name, course) {
+        //         super(name);
+        //         this.course = course;
+        //     }
+        // }
+        //Create Object
+        // const student = new Student("Aman", "JavaScript");
+        // console.log(student.name);
+        // console.log(student.course);
+
+        //5.super keyword
+        class Animal {
+            sound() {
+                console.log("Animal Sound");
+            }
+        }
+        class Dog extends Animal {
+            sound() {
+                super.sound();
+
+                console.log("Dog Barks");
+            }
+        }
+        const dog = new Dog();
+        dog.sound();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <Script>
+
+        //tasl 1:1. Write a JavaScript program that creates a class called 'Shape'with a method to calculate the area. Create two 
+        // subclasses, 'Circle'and 'Triangle', that inherit from the 'Shape' class and override thearea calculation method. Create an 
+        // instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
+        // class Shape{
+        //     CalculatedArea(){
+
+        //     }
+        // }
+
+        // class Circle extends Shape{
+        //     constructor(radius){
+        //         super();
+        //         this.radius = radius;
+        //     }
+        //     CalculatedArea(){
+        //         return 3.14 * this.radius * this.radius;
+        //     }
+
+        // }
+
+        // class Rectangle extends Shape{
+        //     constructor(width,height){
+        //         super();
+        //         this.width = width;
+        //         this.height = height;
+        //     }
+        //     CalculatedArea(){
+        //         return this.width * this.height;
+        //     }
+        // }
+
+        // let cir = new Circle(5);
+        // console.log(`circle area :- ${cir.CalculatedArea()}`);
+
+        // let rec = new Rectangle(5,10);
+        // console.log(`Rectangle area :- ${rec.CalculatedArea()}`);
+
+        //task:2 2.Write a JavaScript program that creates a class called "BankAccount"with properties for account number and 
+        // balance. Include methods to deposit and withdraw money from the account. Create some instances of the "BankAccount" 
+        // class, deposit some money, and withdraw a portion of it.
+
+        // class BankAccount {
+        //     constructor(accountNumber, balance) {
+        //         this.accountNumber = accountNumber;
+        //         this.balance = balance;
+        //         console.log(`A/c No.: ${accountNumber}`);
+        //         console.log(`Opening Balance: $${balance}`);
+        //     }
+        //     deposit(amount) {
+        //         this.balance += amount;
+        //         console.log(`Deposited: $${amount}`);
+        //     }
+        //     withdraw(amount) {
+        //         if (amount <= this.balance) {
+        //             this.balance -= amount;
+        //             console.log(`Withdrawn: $${amount}`);
+        //         }
+        //         else {
+        //             console.log(`Want to withdrawn: $${amount}`);
+        //             console.log('Insufficient balance');
+        //         }
+        //     }
+        //     displayBalance() {
+
+        //         console.log(`Account Balance: $${this.balance}`);
+        //     }
+        // }
+
+        // // Create BankAccount class
+        // const account = new BankAccount('111', 1500);
+        // // Deposit money into the account
+        // account.deposit(500);
+        // // Withdraw money from the account
+        // account.withdraw(400);
+        // // Display the account balance
+        // account.displayBalance();
+        // // Withdraw money from the account
+        // account.withdraw(1800);
+        // // Display the account balance
+        // account.displayBalance();
+
+        //3. Write a JavaScript program to create a class called "Person" with properties for name, age and country.Include a method to display the
+        //person's details. Create two instances of the 'Person' class and display their details.
+
+        // class Person {
+        //     constructor(name, age, country) {
+        //         this.name = name;
+        //         this.age = age;
+        //         this.country = country;
+
+        //     }
+        //     displayDetails() {
+        //         console.log(`Name: ${this.name}`);
+        //         console.log(`Age: ${this.age}`);
+        //         console.log(`Country: ${this.country}`);
+        //     }
+        // }
+        // const person1 = new Person('Jay', 25, 'USA');
+        // const person2 = new Person('Ashish', 30, 'India');
+        // person1.displayDetails();
+        // person2.displayDetails();
+
+        // 4. Write a JavaScript program that creates a class called University with properties for university name and departments.Include methods to add
+        // a department, remove a department, and display all departments.Create an instance of the University class and add and remove departments.
+
+        class University {
+            constructor(name) {
+                this.name = name;
+                this.departments = [];
+            }
+            addDepartment(department) {
+                this.departments.push(department);
+                console.log(`Department "${department}" added to ${this.name}.`);
+            }
+            removeDepartment(department) {
+                const index = this.departments.indexOf(department);
+                if (index !== -1) {
+
+                    this.departments.splice(index, 1);
+                    console.log(`Department "${department}" removed from ${this.name}.`);
+                } else {
+                    console.log(`Department "${department}" does not exist in ${this.name}.`);
+                }
+            }
+            displayDepartments() {
+                console.log(`Departments in ${this.name}:`);
+                if (this.departments.length === 0) {
+                    console.log('No departments available.');
+                } else {
+                    this.departments.forEach((department, index) => {
+                        console.log(`${index + 1}. ${department}`);
+                    });
+                }
+            }
+        }
+        // Create an instance of the University class
+        const university = new University('ABC University');
+        // Perform operations on the university
+        university.displayDepartments(); // Departments in ABC University: No departments available.
+        university.addDepartment('Science');
+        university.addDepartment('Mathematics');
+        university.addDepartment('Physics');
+        university.displayDepartments();
+        university.removeDepartment('Mathematics');
+        university.displayDepartments();
+        university.removeDepartment('Chemistry');
+
+
+
+
+
+
+    </Script>
+
+</body>
+
+</html>

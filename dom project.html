@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div align="center">
+        <h1>Add List</h1>
+        <p>
+            <label for="name">Enter your name :- </label>
+            <input type="text" id="name" placeholder="Enter name">
+        </p>
+        <p>
+            <label for="age">Enter your age :- </label>
+            <input type="text" id="age" placeholder="Enter age">
+        </p>
+
+        <p>
+            <input type="button" onclick="AddList()" value="add">
+        </p>
+
+        <p>
+            <input type="button" onclick="removeText()" value="removeText">
+        </p>
+
+        <hr>
+
+        <ul id="list"></ul>
+
+    </div>
+
+    <!-- <div id="root">
+
+    </div>
+
+    <ul id="list"></ul> -->
+
+
+    <script>
+
+        //name
+        const AddList = () => {
+            let name = document.getElementById('name').value;
+
+            let list = document.getElementById('list');
+
+            let li = document.createElement('li');
+            li.innerText = name
+            li.click = () => {
+                alert("hiii")
+            }
+            list.appendChild(li)
+        }
+
+        //age
+        const AddList1 = () => {
+            let age = document.getElementById('age').value;
+
+            let list = document.getElementById('list');
+
+            let li = document.createElement('li');
+            li.innerText = age
+            li.click = () => {
+                alert("hiii")
+            }
+            list.appendChild(li)
+        }
+
+        function removeText() {
+            document.getElementById("text").remove();
+        }
+
+
+        // let root = document.getElementById('root');
+
+        // let p = document.createElement("p");
+        // p.innerHTML = "<b>Hello</b>"
+
+        // let h1 = document.createElement("h1");
+        // h1.innerText = "JS"
+
+        // root.appendChild(p);
+        // root.append(h1)
+
+        // let list = document.getElementById('list');
+
+        // let li1 = document.createElement('li');
+        // li1.innerText = "HTML"
+
+        // let li2 = document.createElement('li');
+        // li2.innerText = "CSS"
+        // li2.style.color="red"
+
+
+        // list.appendChild(li1)
+        // list.appendChild(li2)
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script type="module">
 
 
-       import {add} from './18.module.js';
-      
-        console.log(add(10,3));
-       
+        import { sum, pi, add, sub } from './18.module.js';
+
+        console.log(sum(10, 3));
+
+
+        console.log(pi);
+
+        console.log(add(5, 2));
+
+        console.log(sub(5, 2));
+
+        import greet from './18.module.js';
+        greet();
+
     </script>
-    
+
 </body>
+
 </html>

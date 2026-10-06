@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .counter {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .counter h1 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .counter button {
+            width: 70px;
+            height: 70px;
+            border: none;
+            border-radius: 50%;
+            background-color: #ff6b00;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .counter button:hover {
+            background-color: #e85d00;
+            transform: scale(1.08);
+        }
+
+        .counter button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="counter">
+            <h1 id="cnt">Count :- 0</h1>
+            <button onclick="Increment()">+</button>
+            <button onclick="Decrement()">-</button>
+            <button onclick="Reset()">R</button>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        let no=0;
+        const updateCount = (no) => {
+            document.getElementById('cnt').innerHTML = `Count :- ${no}`
+        }
+        updateCount(no);
+
+        const Increment = () => {
+            no++;
+            updateCount(no)
+        }
+
+        const Decrement = () => {
+            no--;
+            updateCount(no)
+        }
+
+        const Reset = () => {
+            no=0;
+            updateCount(no)
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

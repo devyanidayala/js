@@ -11,46 +11,59 @@
 
 
     <!-- 1 -->
-    <p id="text">Hello</p>
-    <button onclick="changeText()">Change</button>
+    <!-- <p id="text">Hello</p>
+    <button onclick="changetext()">change</button> -->
+<!-- 
+    <p id="title">javascript</p>
+    <button onclick="changecolor()">change color</button> -->
 
-    <p id="title"> JavaScript</p>
-    <button onclick="changeColor()">Change Color</button>
-
-    <!-- 2 -->
-    <p>New Paragraph</p>
-
-    <!-- 3 -->
     <div id="box"></div>
 
     <script>
 
         // 1. Modifying Content and Styles
 
-        // Change Text (innerHTML)
-        // function changeText() {
-        //     document.getElementById("text").innerHTML = "Welcome";
+        // function changetext(){
+        //     document.getElementById("text").innerHTML = "welcome";
+        // } 
+
+        //change style
+
+        // function changecolor(){
+        //     document.getElementById("title").style.color = "red"                            ;
         // }
 
-        // Change Style
-        // function changeColor() {
-        //     document.getElementById("title").style.color = "red";
-        // }
-        // document.body.style.backgroundColor = "lightblue";
+        //2.create Elements
 
-
-        // 2. Creating Elements
         // let p = document.createElement("p");
         // p.innerHTML = "New Paragraph";
-        // This creates:
-        // <p>New Paragraph</p>
+
+        //append id
+        // let box = document.getElementById("box");
+        // box.appendChild(p);
 
         // 3. appendChild()
-        let p = document.createElement("p");
-        p.innerHTML = "Hello";
-        document.getElementById("box").appendChild(p);
+        let h1 = document.getElementById("h1");
+        h1.innerHTML = "hii";
+        let box = document.getElementById("box");
+        box.appendChild(h1);
+
+
+
+
+
+
+
+        // let p = document.createElement("p");
+        // p.innerHTML = "Hello";
+        // document.getElementById("box")
+        //     .appendChild(p);
+
 
     </script>
+
+
+
 </body>
 
 </html>

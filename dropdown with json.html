@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div align="center">
+
+        <select onchange="contryChange()" id="country">
+
+        </select>
+
+        <select onchange="stateChange()" id="state">
+
+        </select>
+
+        <select onchange="cityChange()" id="city">
+
+        </select>
+
+    </div>
+
+    <script>
+
+
+
+
+        // let data = {
+        //     "name" : "ajay",
+        //     "age" : 21,
+        //     "isStudent" : true
+        // }
+
+        // console.log(data);
+
+        // let fruit = {
+        //     "fruits" : ["Apple","Banana","Kiwi"]
+        // }
+
+        // console.log(fruit);
+
+        // let name = `{
+        //                 "name" : "jay", 
+        //                 "age":21
+        //             }`;
+
+        // console.log(JSON.parse(name));
+
+
+
+        // let st = [
+        //     {
+        //         name : 'jay',
+        //         age : 21
+        //     },
+        //     {
+        //         name : 'ajay',
+        //         age : 22
+        //     },
+        // ]
+
+        // console.log(JSON.stringify(st));
+
+        let data = `
+[
+    {
+        "id": 1,
+        "name": "India",
+        "state": [
+            {
+                "id": 101,
+                "name": "Gujarat",
+                "city": [
+                    {"id": 10101, "name": "Surat"},
+                    {"id": 10102, "name": "Ahmedabad"},
+                    {"id": 10103, "name": "Vadodara"},
+                    {"id": 10104, "name": "Rajkot"},
+                    {"id": 10105, "name": "Vapi"}
+                ]
+            },
+            {
+                "id": 102,
+                "name": "Maharashtra",
+                "city": [
+                    {"id": 10201, "name": "Mumbai"},
+                    {"id": 10202, "name": "Pune"},
+                    {"id": 10203, "name": "Nagpur"},
+                    {"id": 10204, "name": "Nashik"},
+                    {"id": 10205, "name": "Thane"}
+                ]
+            },
+            {
+                "id": 103,
+                "name": "Rajasthan",
+                "city": [
+                    {"id": 10301, "name": "Jaipur"},
+                    {"id": 10302, "name": "Jodhpur"},
+                    {"id": 10303, "name": "Udaipur"},
+                    {"id": 10304, "name": "Kota"},
+                    {"id": 10305, "name": "Ajmer"}
+                ]
+            },
+            {
+                "id": 104,
+                "name": "Uttar Pradesh",
+                "city": [
+                    {"id": 10401, "name": "Lucknow"},
+                    {"id": 10402, "name": "Kanpur"},
+                    {"id": 10403, "name": "Agra"},
+                    {"id": 10404, "name": "Varanasi"},
+                    {"id": 10405, "name": "Noida"}
+                ]
+            },
+            {
+                "id": 105,
+                "name": "Madhya Pradesh",
+                "city": [
+                    {"id": 10501, "name": "Bhopal"},
+                    {"id": 10502, "name": "Indore"},
+                    {"id": 10503, "name": "Gwalior"},
+                    {"id": 10504, "name": "Jabalpur"},
+                    {"id": 10505, "name": "Ujjain"}
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 2,
+        "name": "USA",
+        "state": [
+            {
+                "id": 201,
+                "name": "California",
+                "city": [
+                    {"id": 20101, "name": "Los Angeles"},
+                    {"id": 20102, "name": "San Francisco"},
+                    {"id": 20103, "name": "San Diego"},
+                    {"id": 20104, "name": "San Jose"},
+                    {"id": 20105, "name": "Sacramento"}
+                ]
+            },
+            {
+                "id": 202,
+                "name": "Texas",
+                "city": [
+                    {"id": 20201, "name": "Houston"},
+                    {"id": 20202, "name": "Dallas"},
+                    {"id": 20203, "name": "Austin"},
+                    {"id": 20204, "name": "San Antonio"},
+                    {"id": 20205, "name": "Fort Worth"}
+                ]
+            },
+            {
+                "id": 203,
+                "name": "Florida",
+                "city": [
+                    {"id": 20301, "name": "Miami"},
+                    {"id": 20302, "name": "Orlando"},
+                    {"id": 20303, "name": "Tampa"},
+                    {"id": 20304, "name": "Jacksonville"},
+                    {"id": 20305, "name": "Tallahassee"}
+                ]
+            },
+            {
+                "id": 204,
+                "name": "New York",
+                "city": [
+                    {"id": 20401, "name": "New York City"},
+                    {"id": 20402, "name": "Buffalo"},
+                    {"id": 20403, "name": "Rochester"},
+                    {"id": 20404, "name": "Albany"},
+                    {"id": 20405, "name": "Syracuse"}
+                ]
+            },
+            {
+                "id": 205,
+                "name": "Illinois",
+                "city": [
+                    {"id": 20501, "name": "Chicago"},
+                    {"id": 20502, "name": "Aurora"},
+                    {"id": 20503, "name": "Naperville"},
+                    {"id": 20504, "name": "Rockford"},
+                    {"id": 20505, "name": "Springfield"}
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 3,
+        "name": "Canada",
+        "state": [
+            {
+                "id": 301,
+                "name": "Ontario",
+                "city": [
+                    {"id": 30101, "name": "Toronto"},
+                    {"id": 30102, "name": "Ottawa"},
+                    {"id": 30103, "name": "Hamilton"},
+                    {"id": 30104, "name": "London"},
+                    {"id": 30105, "name": "Mississauga"}
+                ]
+            },
+            {
+                "id": 302,
+                "name": "Quebec",
+                "city": [
+                    {"id": 30201, "name": "Montreal"},
+                    {"id": 30202, "name": "Quebec City"},
+                    {"id": 30203, "name": "Laval"},
+                    {"id": 30204, "name": "Gatineau"},
+                    {"id": 30205, "name": "Sherbrooke"}
+                ]
+            },
+            {
+                "id": 303,
+                "name": "British Columbia",
+                "city": [
+                    {"id": 30301, "name": "Vancouver"},
+                    {"id": 30302, "name": "Victoria"},
+                    {"id": 30303, "name": "Surrey"},
+                    {"id": 30304, "name": "Burnaby"},
+                    {"id": 30305, "name": "Richmond"}
+                ]
+            },
+            {
+                "id": 304,
+                "name": "Alberta",
+                "city": [
+                    {"id": 30401, "name": "Calgary"},
+                    {"id": 30402, "name": "Edmonton"},
+                    {"id": 30403, "name": "Red Deer"},
+                    {"id": 30404, "name": "Lethbridge"},
+                    {"id": 30405, "name": "Medicine Hat"}
+                ]
+            },
+            {
+                "id": 305,
+                "name": "Manitoba",
+                "city": [
+                    {"id": 30501, "name": "Winnipeg"},
+                    {"id": 30502, "name": "Brandon"},
+                    {"id": 30503, "name": "Steinbach"},
+                    {"id": 30504, "name": "Thompson"},
+                    {"id": 30505, "name": "Portage la Prairie"}
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 4,
+        "name": "Australia",
+        "state": [
+            {
+                "id": 401,
+                "name": "New South Wales",
+                "city": [
+                    {"id": 40101, "name": "Sydney"},
+                    {"id": 40102, "name": "Newcastle"},
+                    {"id": 40103, "name": "Wollongong"},
+                    {"id": 40104, "name": "Parramatta"},
+                    {"id": 40105, "name": "Dubbo"}
+                ]
+            },
+            {
+                "id": 402,
+                "name": "Victoria",
+                "city": [
+                    {"id": 40201, "name": "Melbourne"},
+                    {"id": 40202, "name": "Geelong"},
+                    {"id": 40203, "name": "Ballarat"},
+                    {"id": 40204, "name": "Bendigo"},
+                    {"id": 40205, "name": "Shepparton"}
+                ]
+            },
+            {
+                "id": 403,
+                "name": "Queensland",
+                "city": [
+                    {"id": 40301, "name": "Brisbane"},
+                    {"id": 40302, "name": "Gold Coast"},
+                    {"id": 40303, "name": "Cairns"},
+                    {"id": 40304, "name": "Townsville"},
+                    {"id": 40305, "name": "Toowoomba"}
+                ]
+            },
+            {
+                "id": 404,
+                "name": "Western Australia",
+                "city": [
+                    {"id": 40401, "name": "Perth"},
+                    {"id": 40402, "name": "Bunbury"},
+                    {"id": 40403, "name": "Albany"},
+                    {"id": 40404, "name": "Geraldton"},
+                    {"id": 40405, "name": "Kalgoorlie"}
+                ]
+            },
+            {
+                "id": 405,
+                "name": "South Australia",
+                "city": [
+                    {"id": 40501, "name": "Adelaide"},
+                    {"id": 40502, "name": "Mount Gambier"},
+                    {"id": 40503, "name": "Whyalla"},
+                    {"id": 40504, "name": "Murray Bridge"},
+                    {"id": 40505, "name": "Port Augusta"}
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 5,
+        "name": "United Kingdom",
+        "state": [
+            {
+                "id": 501,
+                "name": "England",
+                "city": [
+                    {"id": 50101, "name": "London"},
+                    {"id": 50102, "name": "Manchester"},
+                    {"id": 50103, "name": "Birmingham"},
+                    {"id": 50104, "name": "Liverpool"},
+                    {"id": 50105, "name": "Leeds"}
+                ]
+            },
+            {
+                "id": 502,
+                "name": "Scotland",
+                "city": [
+                    {"id": 50201, "name": "Edinburgh"},
+                    {"id": 50202, "name": "Glasgow"},
+                    {"id": 50203, "name": "Aberdeen"},
+                    {"id": 50204, "name": "Dundee"},
+                    {"id": 50205, "name": "Inverness"}
+                ]
+            },
+            {
+                "id": 503,
+                "name": "Wales",
+                "city": [
+                    {"id": 50301, "name": "Cardiff"},
+                    {"id": 50302, "name": "Swansea"},
+                    {"id": 50303, "name": "Newport"},
+                    {"id": 50304, "name": "Wrexham"},
+                    {"id": 50305, "name": "Bangor"}
+                ]
+            },
+            {
+                "id": 504,
+                "name": "Northern Ireland",
+                "city": [
+                    {"id": 50401, "name": "Belfast"},
+                    {"id": 50402, "name": "Derry"},
+                    {"id": 50403, "name": "Lisburn"},
+                    {"id": 50404, "name": "Newtownabbey"},
+                    {"id": 50405, "name": "Bangor"}
+                ]
+            },
+            {
+                "id": 505,
+                "name": "Cornwall",
+                "city": [
+                    {"id": 50501, "name": "Truro"},
+                    {"id": 50502, "name": "Penzance"},
+                    {"id": 50503, "name": "Falmouth"},
+                    {"id": 50504, "name": "Newquay"},
+                    {"id": 50505, "name": "St Austell"}
+                ]
+            }
+        ]
+    }
+]
+`;
+
+
+
+        let allrecord = JSON.parse(data);
+
+        const getCountryRecord = () => {
+            let cont = document.getElementById('country')
+            let tbl = ""
+            tbl += "<option>---Select Country---</option>";
+            allrecord.map((val) => {
+                tbl += `
+                            <option value="${val.name}">${val.name}</option>
+                        `
+
+            })
+            document.getElementById('country').innerHTML = tbl;
+        }
+        getCountryRecord();
+
+        const contryChange = () => {
+            let id = document.getElementById('country').value;
+
+            let tbl = ""
+            tbl += "<option>---select state---</option>"
+            let state = allrecord.filter((val) => {
+
+                if (val.name == id) {
+                    val.state.filter((st) => {
+                        console.log(st);
+
+                        tbl += `
+                                        <option>${st.name}</option>
+                                    `
+                    })
+                }
+            })
+            document.getElementById('state').innerHTML = tbl;
+        }
+
+        const stateChange = () => {
+            let id = document.getElementById('state').value;
+
+            let tbl = "";
+            tbl += "<option>---select city---</option>"
+            let city = allrecord.filter((val) => {
+                val.state.filter((st) => {
+                    if (st.name == id) {
+                        st.city.filter((ct) => {
+                            console.log(ct);
+
+                            tbl += `
+                         <option>${ct.name}</option>
+                         `
+                        })
+                    }
+                });
+            });
+            document.getElementById('city').innerHTML = tbl;
+        }
+        getCountryRecord();
+
+    </script>
+
+</body>
+
+</html>

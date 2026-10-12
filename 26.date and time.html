@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
@@ -20,10 +22,10 @@
 
         // 4. getDay(): Returns day number.
         // console.log(date.getDay());
-        
+
         // 5. getHours(): Returns hour.
         // console.log(date.getHours());
-        
+
         // 6. getMinutes(): Returns minutes.
         // console.log(date.getMinutes());
 
@@ -37,33 +39,56 @@
 
         // Manipulating Dates (Set Methods) : Used to change date values.
         // 1. setDate(): Change day of month.
-        let date = new Date();
-        date.setDate(25);
-        console.log(date);
+        // let date = new Date();
+        // date.setDate(25);
+        // console.log(date);
 
         // 2. setFullYear(): Change year.
-        date.setFullYear(2029);
-        console.log(date);
-        
+        // date.setFullYear(2029);
+        // console.log(date);
+
         //3. setMonth(): Change month.
-        date.setMonth(25);
-        console.log(date);
-        
+        // date.setMonth(25);
+        // console.log(date);
+
         // 4. setHours(): Change hour.
-        date.setHours(22);
-        console.log(date);
-        
+        // date.setHours(22);
+        // console.log(date);
+
         // ------------------------------------------------------------------
 
         // JavaScript Timing Functions
 
         // 1. setTimeout(): executes a function once after a specified time.
-        
-        
-        
-        
-        
+
+        // setTimeout(function () {
+        //     console.log('hello');
+        // }, 3000);
+
+        // 2. clearTimeout(): clearTimeout() stops a timeout before it executes.
+
+        let timer = setTimeout(function () {
+            console.log("Hello");
+        }, 5000);
+        clearTimeout(timer);
+
+        // 3. setInterval(): setInterval() executes a function repeatedly after a fixed time interval.
+        setInterval(function () {
+            console.log("Hello");
+        }, 2000);
+
+        // 4. clearInterval(): Used to stop setInterval().
+        let timer = setInterval(function () {
+            console.log("Running");
+        }, 1000);
+        clearInterval(timer);
+
+
+
+
+
     </script>
-    
+
 </body>
+
 </html>

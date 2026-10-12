@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div align="center">
+
+        <select onchange="contryChange()" id="country">
+        </select>
+
+        <select onchange="stateChange()" id="state">
+        </select>
+
+        <select id="city">
+        </select>
+
+    </div>
+
+    <Script>
+
+        //json
+        // let data = {
+        //     "name" : "ajay",
+        //     "age" : 21
+        // }
+        // console.log(data);
+
+        // json in array
+        // let fruits = {
+        //     "fruits" : ["apple","banana","kiwi"]
+        // }
+        // console.log(fruits);
+
+        //json convert to object
+        // let student= `{
+        //     "name" : "jay",
+        //     "age" : 21
+        // }`;
+        // console.log(JSON.parse(student));
+
+
+        //object convert to json
+        // let student = [
+        // {
+        //     name : 'ajay',
+        //     age : 21
+        // },
+        // {
+        //     name : 'vijay',
+        //     age : 22
+
+        // }]
+        // console.log(JSON.stringify(student));
+
+
+
+
+        //dropdown list
+
+        let data = [
+            {
+                "id" : 1,
+                "name" : "india",
+                "state" : [
+                    {
+                        "id":101,
+                        "name" : "gujrat",
+                        "city" : [
+                            {
+                                "id" :1101,
+                                "name": "surat"
+                            },
+                            {
+                                "id" :1102,
+                                "name": "vapi"
+                            },
+                            {
+                                "id" :1103,
+                                "name": "valsad"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id" : 1,
+                "name" : "astralia",
+                "state" : [
+                    {
+                        "id":101,
+                        "name" : "malborn",
+                        "city" : [
+                            {
+                                "id" :1101,
+                                "name": "surat"
+                            },
+                            {
+                                "id" :1102,
+                                "name": "vapi"
+                            },
+                            {
+                                "id" :1103,
+                                "name": "valsad"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+            // console.log(data);
+
+            let getCountryRecord = () => {
+
+                let tbl = `<option>---select country---</option>`;
+                data.forEach((val) => {
+
+                    tbl += `
+                    <option value="S{val.name}">
+                        ${val.name}
+                    </option>
+                    `;
+                });
+                document.getElementById("country").innerHTML = tbl;
+            };
+            
+            let countychange = () => {
+
+                let countryName = document.getElementById("country").value;
+
+                let tbl = `<option>---select state---</option>`;
+
+                data.forEach(val) => {
+
+                    if(val.name == countryName) {
+
+                        val.state.forEach((st) => {
+
+                            tbl+= `
+                            <option value ="${st.name}">
+                                ${st.name}
+                                </option>
+                            `;
+                        });
+
+                        document.getElementById("state").innerHTML = tbl;
+                        document.getElementById("city").innerHTML = `<option>---select city---</option>`;
+                    };
+                }
+            }
+
+
+
+
+
+//     document.getElementById("state").innerHTML = tbl;
+
+//     document.getElementById("city").innerHTML =
+//         `<option>---Select City---</option>`;
+// };
+
+
+// // State Change
+// const stateChange = () => {
+
+//     let countryName =
+//         document.getElementById("country").value;
+
+//     let stateName =
+//         document.getElementById("state").value;
+
+//     let tbl = `<option>---Select City---</option>`;
+
+//     data.forEach((val) => {
+
+//         if (val.name == countryName) {
+
+//             val.state.forEach((st) => {
+
+//                 if (st.name == stateName) {
+
+//                     st.city.forEach((ct) => {
+
+//                         tbl += `
+//                             <option value="${ct.name}">
+//                                 ${ct.name}
+//                             </option>
+//                         `;
+
+//                     });
+
+//                 }
+
+//             });
+
+//         }
+
+//     });
+
+//     document.getElementById("city").innerHTML = tbl;
+// };
+
+
+// // Page Load
+// getCountryRecord();
+
+
+    </Script>
+
+</body>
+
+</html>

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Changer</title>
+
     <style>
         body {
             margin: 0;
@@ -13,8 +14,8 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
             transition: background-color 0.3s ease;
-            /* Makes color swaps smooth*/
         }
 
         .container {
@@ -42,78 +43,41 @@
 </head>
 
 <body id="back">
+
     <div class="container">
-        <h1 id="name"></h1>
-        <h2>Background Color: <span id="color-code">#FFFFFF</span></h2>
-        <button id="change-btn" onclick="changeBack()">Change Color</button>
+        <h1>Background Changer</h1>
+
+        <h2>
+            Background Color:
+            <span id="color-code">#FFFFFF</span>
+        </h2>
+
+        <button onclick="changeBack()">Change Color</button>
     </div>
+
     <script>
+        const generateRandomColor = () => {
+            let hexCharacters = "0123456789ABCDEF";
+            let hexColor = "#";
 
+            for (let i = 0; i < 6; i++) {
+                let randomIndex = Math.floor(
+                    Math.random() * hexCharacters.length
+                );
+                hexColor += hexCharacters[randomIndex];
+            }
+            return hexColor;
+        };
 
-        // let name = ["Milansir","Chirag","Mitul","Mahek","Devyani","Hetvi"]
+        const changeBack = () => {
+            let newColor = generateRandomColor();
 
-       
-        
+            document.getElementById("back").style.backgroundColor = newColor;
 
-        // const changeBack = () => {
-        //     let no = Math.floor(Math.random() * 6);
-        //     document.getElementById('name').innerHTML = `Name :- ${name[no]}`
-        //     console.log(name[no]);
-            
-            
-        // }
-
-        // let haxColorCode = '0123456789ABCDEF'
-
-
-        // const generateRandomColor = () => {
-        //     let hexColor = '#';
-        //     for(let i=0;i<6;i++){
-        //         const randomIndex = Math.floor(Math.random() * haxColorCode.length);
-        //         hexColor += haxColorCode[randomIndex]
-                
-                
-        //     }
-        //     return hexColor;
-            
-        // }
-
-        // const changeBack = () => {
-            
-        //     const newColor = generateRandomColor();
-        //     let body = document.getElementById('back');
-        //     body.style.backgroundColor=newColor
-            
-        //     document.getElementById('color-code').innerText=newColor
-            
-
-        // }
-
-        // const changeBtn = document.getElementById('change-btn');
-
-        // const colorCodeText = document.getElementById('color-code');
-
-        // const hexCharacters = '0123456789ABCDEF';
-
-        // function generateRandomHex() {
-
-        //     let hexColor = '#';
-
-        //     for (let i = 0; i < 6; i++) {
-        //         const randomIndex = Math.floor(Math.random() * hexCharacters.length); hexColor
-        //             += hexCharacters[randomIndex];
-        //     } return hexColor;
-        // } changeBtn.addEventListener('click', () => {
-        //     const newColor = generateRandomHex();
-        //     document.body.style.backgroundColor = newColor;
-        //     colorCodeText.textContent = newColor;
-        // });
-
+            document.getElementById("color-code").innerText = newColor;
+        };
 
     </script>
+
 </body>
-
-
-
-
 </html>
